@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FCC Technical Documentation Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Permanent+Marker&display=swap');
+        html,
+        body {
+            min-width: 300px;
+            color: #140630;
+            background color: white;
+            font-family: Montserrat;
+            line-height: 1.2;
+            font-weight: 200;
+        }
+        /* START nav bar styling*/
+        
+        #navbar {
+            position: fixed;
+            min-width: 280px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: #5a575e;
+        }
+        
+        header {
+            margin: 10px;
+            text-align: center;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        
+        #main-doc header {
+            text-align: left;
+            margin: 0px;
+        }
+        
+        #navbar ul {
+            height: 80%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        #navbar li {
+            color: #140630;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+        
+        #navbar a {
+            display: block;
+            padding: 10px 30px;
+            color: #140630;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        #navbar a:hover {
+            font-weight: bold;
+        }
+        /* main styling */
+        
+        #main-doc {
+            position: absolute;
+            margin-left: 310px;
+            padding: 15px;
+            margin-bottom: 40px;
+        }
+        
+        section article {
+            color: #140630;
+            margin: 15px;
+            font-size: 1em;
+        }
+        
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+        /* table styling */
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        caption {
+            padding: 10px;
+            font-weight: 500;
+            font-size: 1.3em;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        /* code snippet styling */
+        
+        code {
+            display: block;
+            text-align: left;
+            position: relative;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 2;
+            background-color: #ddd8e6;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        /*mobile phone responsive styling*/
+        
+        @media (max-width: 600px) {
+            #navbar ul {
+                border: 1px solid;
+                height: 240px;
+            }
+            #navbar {
+                position: absolute;
+                top: 0;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-height: 325px;
+                border: none;
+                z-index: 1;
+                border-bottom: 2px solid;
+                overflow: hidden;
+            }
+            #main-doc {
+                position: relative;
+                margin-left: 0px;
+                margin-top: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- START nav bar -->
+    <nav id="navbar">
+        <header>
+            <h1>JavaScript</h1>
+        </header>
+        <ul>
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#learning_pathway" class="nav-link">Learning Pathway</a></li>
+            <li><a href="#javascript_vs._java" class="nav-link">JavaScript vs. Java</a></li>
+            <li><a href="#hello_world!" class="nav-link">Hello World!</a></li>
+            <li><a href="#variables" class="nav-link">Variables</a></li>
+            <li><a href="#reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <!-- END nav bar -->
+    <!-- START main section -->
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    JavaScript is a programming language that allows you to implement complex things on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated
+                    2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
+                </p>
+                <p>
+                    JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project), the Mozilla Foundation, and the Mozilla Corporation.
+                </p>
+                <p>
+                    JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more! JavaScript itself is relatively compact, yet very flexible. Developers
+                    have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
+                </p>
+                <ul>
+                    <li>
+                        Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and
+                        audio samples.
+                    </li>
+                    <li>
+                        Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.
+                    </li>
+                    <li>
+                        Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="learning_pathway">
+            <header>Learning Pathway</header>
+            <article>
+                <p>
+                    JavaScript is arguably more difficult to learn than related technologies such as HTML and CSS. Before attempting to learn JavaScript, you are strongly advised to get familiar with at least these two technologies first, and perhaps others as well. Start
+                    by working through the following modules:
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="javascript_vs._java">
+            <header>JavaScript vs. Java</header>
+            <article>
+                <p>
+                    JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions
+                    and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
+                </p>
+                <p>
+                    JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces.
+                    Variables, parameters, and function return types are not explicitly typed.
+                </p>
+                <table class="js-table">
+                    <caption>JavaScript vs. Java</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">JavaScript</th>
+                            <th scope="col">Java</th>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically.
+                                    </td>
+                                    <td>
+                                        Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Variable data types are not declared (dynamic typing, loosely typed).
+                                    </td>
+                                    <td>
+                                        Variable data types must be declared (static typing, strongly typed).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cannot automatically write to hard disk.
+                                    </td>
+                                    <td>
+                                        Can automatically write to hard disk.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </tr>
+                    </thead>
+                </table>
+            </article>
+        </section>
+        <section class="main-section" id="hello_world!">
+            <header>Hello World!</header>
+            <article>
+                <p>
+                    JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity. However, getting comfortable with JavaScript is more challenging than getting comfortable
+                    with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a Hello world! example. (Hello world! is the standard for introductory programming examples.)
+                </p>
+                <code>function greetMe(yourName) { alert("Hello " + yourName); }<br>
+          greetMe("World");
+        </code>
+                <p>
+                    Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    Variables are containers that store values. You start by declaring a variable with the
+                    <code>var</code> (less recommended, dive deeper for the explanation) or the
+                    <code>let</code> keyword, followed by the name you give to the variable:<br>
+                    <code>let myVariable;</code>
+                </p>
+                <p>
+                    After declaring a variable, you can give it a value:<br>
+                    <code>myVariable = 'Bob';</code>
+                </p>
+                <p>
+                    Also, you can do both these operations on the same line:<br>
+                    <code>let myVariable = 'Bob';</code>
+                </p>
+                <p>
+                    You retrieve the value by calling the variable name:<br>
+                    <code>myVariable;</code>
+                </p>
+                <p>
+                    After assigning a value to a variable, you can change it later in the code:<br>
+                    <code>let myVariable = 'Bob';<br>
+                    myVariable = 'Steve';</code>
+                </p>
+                <p>
+                    So why do we need variables? Variables are necessary to do anything interesting in programming. If values couldn't change, then you couldn't do anything dynamic, like personalize a greeting message or change an image displayed in an image gallery.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <article>
+                All the documentation in this page is taken from
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">MDN</a>.
+
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
